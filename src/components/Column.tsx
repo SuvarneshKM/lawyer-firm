@@ -134,7 +134,6 @@ export const columns: ColumnDef<Lawyer>[] = [
     enableSorting: false,
   },
   {
-    accessorKey: "id",
     id: "actions",
     cell: ({ row }) => (
       <DataTableRowAction row={row} lawyerId={row.getValue("id")} />
