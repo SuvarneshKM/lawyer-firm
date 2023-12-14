@@ -3,8 +3,6 @@ import { ColumnDef } from "@tanstack/react-table";
 import { DataTableRowAction } from "./DataTableRowAction";
 import { Badge } from "./ui/badge";
 import { DragHandleDots2Icon } from "@radix-ui/react-icons";
-import { useSelector } from "react-redux";
-import { RootState } from "@/state/store";
 
 interface Lawyer {
   id: number;
@@ -106,15 +104,12 @@ export const columns: ColumnDef<Lawyer>[] = [
       <DataTableColumnHeader column={column} title="Available Time" />
     ),
     cell: ({ row }) => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const bookedTimeSlots = useSelector(
-        (state: RootState) => state.lawyer.bookedTimeSlots
-      );
-
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const data: any[] = row.getValue("availableTime");
       return (
         <div className="w-[200px] flex flex-wrap gap-1">
-          {row.getValue("availableTime").length > 0 ? (
-            row.getValue("availableTime")?.map((val: string) => (
+          {data?.length > 0 ? (
+            data?.map((val: string) => (
               <>
                 <Badge variant="outline">{val}</Badge>
               </>

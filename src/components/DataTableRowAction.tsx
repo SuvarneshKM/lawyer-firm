@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/state/store";
-import { bookTimeSlot, unbookTimeSlot } from "@/state/lawyer/lawyerSlice";
+import { bookTimeSlot } from "@/state/lawyer/lawyerSlice";
 
 interface DataTableRowActionsProp<TData> {
   row: Row<TData>;
@@ -30,10 +30,8 @@ export function DataTableRowAction<TData>({
     dispatch(bookTimeSlot({ lawyerId, timeSlot }));
   };
 
-  const handleCancelAppointment = (timeSlot: string) => {
-    dispatch(unbookTimeSlot({ lawyerId, timeSlot }));
-  };
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const data: any[] = row.getValue("availableTime");
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -43,14 +41,12 @@ export function DataTableRowAction<TData>({
         <SheetHeader>
           <SheetTitle>Book Slot</SheetTitle>
           <SheetDescription>
-            {row.getValue("availableTime").length > 0
-              ? "Book your slot"
-              : "No slot available"}
+            {data?.length > 0 ? "Book your slot" : "No slot available"}
           </SheetDescription>
         </SheetHeader>
 
         <div className="grid grid-cols-2 items-center gap-4 mt-4">
-          {row.getValue("availableTime")?.map((val: string) => (
+          {data?.map((val: string) => (
             <div className="flex flex-col space-y-1 items-center border p-2 rounded-md">
               <p className="text-md">{val}</p>
               {!bookedTimeSlots.includes(val) && (
