@@ -1,0 +1,91 @@
+{
+  "lawyers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "speciality": "Family Law",
+      "firms": "Doe & Associates",
+      "address": "123 Main St",
+      "phone": "555-1234",
+      "availableTime": ["9:00 AM", "12:00 PM", "2:00 PM", "5:00 PM"]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "speciality": "Criminal Law",
+      "firms": "Smith Law Firm",
+      "address": "456 Oak Ave",
+      "phone": "555-5678",
+      "availableTime": [
+        "10:00 AM",
+        "11:00 PM",
+        "12:00 PM",
+        "2:00 PM",
+        "5:00 PM"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Robert Johnson",
+      "speciality": "Criminal Law",
+      "firms": "Johnson Legal Services",
+      "address": "789 Elm Blvd",
+      "phone": "555-8765",
+      "availableTime": ["8:30 AM", "11:30 AM", "1:30 PM", " 4:30 PM"]
+    },
+    {
+      "id": 4,
+      "name": "Emily Williams",
+      "speciality": "Corporate Law",
+      "firms": "Williams & Partners",
+      "address": "321 Pine Lane",
+      "phone": "555-4321",
+      "availableTime": ["9:30 AM", "12:30 PM", "2:30 PM", "5:30 PM"]
+    },
+    {
+      "id": 5,
+      "name": "Michael Anderson",
+      "speciality": "Criminal Law",
+      "firms": "Anderson & Associates",
+      "address": "234 Cedar St",
+      "phone": "555-9876",
+      "availableTime": ["10:30 AM ", "1:30 PM", "3:30 PM ", "6:30 PM"]
+    },
+    {
+      "id": 6,
+      "name": "Sophia Martinez",
+      "speciality": "Family Law",
+      "firms": "Martinez Legal Group",
+      "address": "567 Birch Road",
+      "phone": "555-2345",
+      "availableTime": ["9:00 AM ", " 12:00 PM", "2:00 PM", "5:00 PM"]
+    },
+    {
+      "id": 7,
+      "name": "Jonathan Taylor",
+      "speciality": "Family Law",
+      "firms": "Taylor Law Solutions",
+      "address": "890 Maple Lane",
+      "phone": "555-3456",
+      "availableTime": ["8:00 AM", "11:00 AM", "1:00 PM ", "4:00 PM"]
+    },
+    {
+      "id": 8,
+      "name": "Olivia Brown",
+      "speciality": "Criminal Law",
+      "firms": "Brown Legal Innovations",
+      "address": "456 Pine Ave",
+      "phone": "555-6543",
+      "availableTime": ["9:30 AM ", " 12:30 PM", "2:30 PM ", "5:30 PM"]
+    },
+    {
+      "id": 9,
+      "name": "David Miller",
+      "speciality": "Corporate Law",
+      "firms": "Miller & Co. Legal",
+      "address": "789 Oak Lane",
+      "phone": "555-8765",
+      "availableTime": ["10:00 AM ", "1:00 PM", "3:00 PM ", " 6:00 PM"]
+    }
+  ]
+}
